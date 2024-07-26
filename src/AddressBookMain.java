@@ -8,7 +8,7 @@ public class AddressBookMain {
         Scanner scanner = new Scanner(System.in);
 
         // Adding a sample contact for demonstration
-        Contact contact = new Contact("John", "Doe", "123 Main St", "Anytown", "Anystate", "123456", "123-456-7890", "john.doe@example.com");
+        Contact contact = new Contact("Jeffrey", "Samuel", "12 Main St", "Chennai", "TamilNadu", "129845", "9876543210", "je.sam@example.com");
         addressBook.addContact(contact);
 
         System.out.print("Enter First Name of the contact to edit: ");
