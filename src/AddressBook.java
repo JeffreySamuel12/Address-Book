@@ -42,4 +42,8 @@ public class AddressBook {
         System.out.print("Enter new Email: ");
         contact.setEmail(scanner.nextLine());
     }
+
+    public void deleteContact(String firstName, String lastName) {
+        contacts.removeIf(contact -> contact.getFirstName().equalsIgnoreCase(firstName) && contact.getLastName().equalsIgnoreCase(lastName));
+    }
 }

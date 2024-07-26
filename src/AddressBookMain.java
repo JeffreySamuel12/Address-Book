@@ -11,18 +11,14 @@ public class AddressBookMain {
         Contact contact = new Contact("Jeffrey", "Samuel", "12 Main St", "Chennai", "TamilNadu", "129845", "9876543210", "je.sam@example.com");
         addressBook.addContact(contact);
 
-        System.out.print("Enter First Name of the contact to edit: ");
-        String firstName = scanner.nextLine();
-        System.out.print("Enter Last Name of the contact to edit: ");
-        String lastName = scanner.nextLine();
+        // Delete contact
+        System.out.print("Enter First Name of the contact to delete: ");
+        String deleteFirstName = scanner.nextLine();
+        System.out.print("Enter Last Name of the contact to delete: ");
+        String deleteLastName = scanner.nextLine();
 
-        Contact contactToEdit = addressBook.findContactByName(firstName, lastName);
-        if (contactToEdit != null) {
-            addressBook.editContact(contactToEdit, scanner);
-            System.out.println("Contact updated successfully!");
-        } else {
-            System.out.println("Contact not found.");
-        }
+        addressBook.deleteContact(deleteFirstName, deleteLastName);
+        System.out.println("Contact deleted successfully!");
 
         addressBook.displayContacts();
     }
